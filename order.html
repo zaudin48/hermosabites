@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Hermosa Bites</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="hermosabites.png" alt="Hermosa Bites Logo">
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search for cakes..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+            
+            <div class="user-menu">
+                <ul>
+                    <li><a href="index.html"><img src="home.svg" alt=""><br>Home</a></li>
+                    <li><a href="menu.html"><img src="Menu.png" alt=""><br>Menu</a></li>
+                    <li><a href="order.html"><img src="Order.png" alt=""><br>Order</a></li>
+                    <li><a href="contact.html"><img src="contact.png" alt=""><br>Contact Us</a></li>
+
+                    <button id="loginBtn" class="button">Login</button><br>
+                    <button id="signupBtn" class="button">Sign Up</button>
+
+
+                    <!-- Sign-up Modal -->
+                    <div id="signupModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Sign Up</h2>
+                            <form>
+                                <label for="signup-username">Username:</label>
+                                <input type="text" id="signup-username" name="username" required><br><br>
+                                <label for="email">Email:</label>
+                                <input type="email" id="signup-email" name="email" required><br><br>
+                                <label for="signup-password">Password:</label>
+                                <input type="password" id="signup-password" name="password" required><br><br>
+                                <input type="submit" value="Sign Up">
+                            </form>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Login</h2>
+                    <form>
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" name="username" required><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="login-password" name="password" required><br><br>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+            </div>
+
+            
+        </div>
+    </header>
+
+
+    <section class="order-form">
+        <h1>Order Your Cake</h1>
+        <form>
+            
+            <label for="flavor">Choose Cake Flavor:</label>
+            <select id="flavor" name="flavor">
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="red_velvet">Red Velvet</option>
+            </select>
+            
+
+            <label for="size">Choose Cake Size:</label>
+            <select id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="message">Add a Custom Message:</label>
+            <input type="text" id="message" name="message" placeholder="Enter your message">
+            <button type="button" id="customize-button">Customize Your Cake</button>
+            <input type="submit" value="Place Order">
+            
+       
+
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hermosa Bites. All Rights Reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

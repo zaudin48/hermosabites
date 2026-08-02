@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hermosa Bites</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="hermosabites.png" alt="Hermosa Bites Logo">
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search for cakes..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+            
+            
+           
+            <div class="user-menu">
+                <ul>
+                    <li><a href="index.html"><img src="home.svg" alt=""><br>Home</a></li>
+                    <li><a href="menu.html"><img src="Menu.png" alt=""><br>Menu</a></li>
+                    <li><a href="order.html"><img src="Order.png" alt=""><br>Order</a></li>
+                    <li><a href="contact.html"><img src="contact.png" alt=""><br>Contact Us</a></li>
+
+                   <!-- Login and Sign-up Buttons -->
+<button id="loginBtn" class="button">Login</button>
+<button id="signupBtn" class="button">Sign Up</button>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login to Hermosa Bites</h2>
+        <form>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="modal-footer">
+            <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Sign-up Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Your Account</h2>
+        <form>
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="username" required>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <div class="modal-footer">
+            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </header>
+
+
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out!</p>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hermosa Bites. All Rights Reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

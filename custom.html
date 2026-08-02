@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Customization</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    margin: 0;
+    padding: 20px;
+}
+
+.customization-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #302a30;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.selected-cake {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.selected-cake img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid #4a3b4a; /* Border around image */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #a1609b;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+select:focus, textarea:focus {
+    border-color: #7467cea4;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background: linear-gradient(to right, #fe00c3, #3e3c38);
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background: linear-gradient(to right, #52145b, #605d52);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    background: #c69d00; /* Darker shade on click */
+}
+
+    </style>
+</head>
+<body>
+    <div class="customization-container">
+        <h2>Customize Your Cake</h2>
+        
+        <div class="selected-cake">
+            <img id="selected-cake-image" src="custom_cake.jpg"  alt="Selected Cake"> <!-- Default image -->
+        </div>
+
+        <form id="cake-customization-form">
+            <div class="form-group">
+                <label for="cake-size">Select Cake Size:</label>
+                <select id="cake-size" name="cake-size" required>
+                    <option value="">--Select Size--</option>
+                    <option value="small">Small (6 inches)</option>
+                    <option value="medium">Medium (8 inches)</option>
+                    <option value="large">Large (10 inches)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cake-flavor">Select Cake Flavor:</label>
+                <select id="cake-flavor" name="cake-flavor" required>
+                    <option value="">--Select Flavor--</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="red-velvet">Red Velvet</option>
+                    <option value="carrot">Carrot</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cake-decoration">Select Decoration:</label>
+                <select id="cake-decoration" name="cake-decoration">
+                    <option value="">--Select Decoration--</option>
+                    <option value="none">None</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="flowers">Flowers</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="personal-message">Personalized Message:</label>
+                <textarea id="personal-message" name="personal-message" rows="3" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script> <!-- Link to your external JavaScript -->
+</body>
+</html>
