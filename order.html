@@ -1,105 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Online - Hermosa Bites</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermosa Bites | Order</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="hermosabites.png" alt="Hermosa Bites Logo">
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search for cakes..." class="search-input">
-                <button type="submit" class="search-button">Search</button>
-            </div>
-            
-            <div class="user-menu">
-                <ul>
-                    <li><a href="index.html"><img src="home.svg" alt=""><br>Home</a></li>
-                    <li><a href="menu.html"><img src="Menu.png" alt=""><br>Menu</a></li>
-                    <li><a href="order.html"><img src="Order.png" alt=""><br>Order</a></li>
-                    <li><a href="contact.html"><img src="contact.png" alt=""><br>Contact Us</a></li>
 
-                    <button id="loginBtn" class="button">Login</button><br>
-                    <button id="signupBtn" class="button">Sign Up</button>
+<header>
+<nav class="navbar">
+<div class="logo">
+<img src="hermosabites.png" alt="Hermosa Bites">
+<h2>Hermosa Bites</h2>
+</div>
 
+<div class="search-container">
+<input class="search-input" type="text" placeholder="Search cakes...">
+<button class="search-button">Search</button>
+</div>
 
-                    <!-- Sign-up Modal -->
-                    <div id="signupModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2>Sign Up</h2>
-                            <form>
-                                <label for="signup-username">Username:</label>
-                                <input type="text" id="signup-username" name="username" required><br><br>
-                                <label for="email">Email:</label>
-                                <input type="email" id="signup-email" name="email" required><br><br>
-                                <label for="signup-password">Password:</label>
-                                <input type="password" id="signup-password" name="password" required><br><br>
-                                <input type="submit" value="Sign Up">
-                            </form>
-                        </div>
-                    </div>
+<div class="user-menu">
+<ul>
+<li><a href="index.html"><img src="home.svg"><br>Home</a></li>
+<li><a href="menu.html"><img src="Menu.png"><br>Menu</a></li>
+<li><a href="order.html"><img src="Order.png"><br>Order</a></li>
+<li><a href="contact.html"><img src="contact.png"><br>Contact</a></li>
+<button id="loginBtn" class="button">Login</button>
+<button id="signupBtn" class="button">Sign Up</button>
+</ul>
+</div>
+</nav>
+</header>
 
-                </ul>
-            </div>
+<section class="order-form">
+<h1>Customize & Order Your Cake</h1>
 
-            <!-- Login Modal -->
-            <div id="loginModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Login</h2>
-                    <form>
-                        <label for="login-username">Username:</label>
-                        <input type="text" id="login-username" name="username" required><br><br>
-                        <label for="password">Password:</label>
-                        <input type="password" id="login-password" name="password" required><br><br>
-                        <input type="submit" value="Login">
-                    </form>
-                </div>
-            </div>
+<form id="cakeOrderForm">
 
-            
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Phone Number</label>
+<input type="tel" placeholder="9876543210" required>
+
+<label>Email</label>
+<input type="email" placeholder="example@email.com">
+
+<label>Select Cake</label>
+<select>
+<option>Chocolate Truffle</option>
+<option>Red Velvet</option>
+<option>Designer Cake</option>
+<option>Classic Vanilla</option>
+</select>
+
+<label>Cake Weight</label>
+<select>
+<option>500 g</option>
+<option>1 Kg</option>
+<option>2 Kg</option>
+<option>3 Kg</option>
+</select>
+
+<label>Egg Preference</label>
+<select>
+<option>Egg</option>
+<option>Eggless</option>
+</select>
+
+<label>Delivery Date</label>
+<input type="date" required>
+
+<label>Delivery Time</label>
+<input type="time">
+
+<label>Delivery Address</label>
+<textarea rows="4" placeholder="Enter complete address"></textarea>
+
+<label>Custom Message on Cake</label>
+<input type="text" placeholder="Happy Birthday John">
+
+<label>Special Instructions</label>
+<textarea rows="4" placeholder="Extra candles, less cream, etc."></textarea>
+
+<label>Coupon Code</label>
+<input type="text" placeholder="HB20">
+<div style="display:flex; gap:15px; margin-top:20px;">
+
+    <a href="customize.html" style="flex:1; text-decoration:none;">
+        <button
+            type="button"
+            style="
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:12px;
+            background:#ffb347;
+            color:white;
+            font-size:16px;
+            cursor:pointer;">
+            🎂 Customize Cake
+        </button>
+    </a>
+
+    <input
+        type="submit"
+        value="Place Order"
+        style="flex:1;">
+
+</div>
+
+</form>
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <img src="hermosabites.png" alt="Hermosa Bites">
+
+            <h2>Hermosa Bites</h2>
+
+            <p>
+                Crafting sweet memories with freshly baked cakes,
+                pastries and desserts made with love.
+            </p>
+
         </div>
-    </header>
 
+        <div class="footer-links">
 
-    <section class="order-form">
-        <h1>Order Your Cake</h1>
-        <form>
-            
-            <label for="flavor">Choose Cake Flavor:</label>
-            <select id="flavor" name="flavor">
-                <option value="chocolate">Chocolate</option>
-                <option value="vanilla">Vanilla</option>
-                <option value="red_velvet">Red Velvet</option>
-            </select>
-            
+            <h3>Quick Links</h3>
 
-            <label for="size">Choose Cake Size:</label>
-            <select id="size" name="size">
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-            </select>
+            <a href="index.html">Home</a>
 
-            <label for="message">Add a Custom Message:</label>
-            <input type="text" id="message" name="message" placeholder="Enter your message">
-            <button type="button" id="customize-button">Customize Your Cake</button>
-            <input type="submit" value="Place Order">
-            
-       
+            <a href="menu.html">Menu</a>
 
-        </form>
-    </section>
+            <a href="order.html">Order</a>
 
-    <footer>
-        <p>&copy; 2024 Hermosa Bites. All Rights Reserved.</p>
-    </footer>
-    <script src="index.js"></script>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📍 Panjim, Goa</p>
+
+            <p>📞 +91 98765 43210</p>
+
+            <p>📧 hello@hermosabites.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">📷</a>
+
+                <a href="#">📘</a>
+
+                <a href="#">🐦</a>
+
+                <a href="#">💬</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Hermosa Bites. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>

@@ -1,131 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Hermosa Bites</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermosa Bites | Menu</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="hermosabites.png" alt="Hermosa Bites Logo">
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search for cakes..." class="search-input">
-                <button type="submit" class="search-button">Search</button>
-            </div>
-            
-            
-            
-            <div class="user-menu">
-                <ul>
-                    <li><a href="index.html"><img src="home.svg" alt=""><br>Home</a></li>
-                    <li><a href="menu.html"><img src="Menu.png" alt=""><br>Menu</a></li>
-                    <li><a href="order.html"><img src="Order.png" alt=""><br>Order</a></li>
-                    <li><a href="contact.html"><img src="contact.png" alt=""><br>Contact Us</a></li>
 
-                    <button id="loginBtn" class="button">Login</button><br>
-                    <button id="signupBtn" class="button">Sign Up</button>
+<header>
+<nav class="navbar">
+<div class="logo">
+<img src="hermosabites.png" alt="Hermosa Bites">
+<h2>Hermosa Bites</h2>
+</div>
 
+<div class="search-container">
+<input class="search-input" type="text" placeholder="Search your favourite cake...">
+<button class="search-button">Search</button>
+</div>
 
-                    <!-- Sign-up Modal -->
-                    <div id="signupModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2>Sign Up</h2>
-                            <form>
-                                <label for="signup-username">Username:</label>
-                                <input type="text" id="signup-username" name="username" required><br><br>
-                                <label for="email">Email:</label>
-                                <input type="email" id="signup-email" name="email" required><br><br>
-                                <label for="signup-password">Password:</label>
-                                <input type="password" id="signup-password" name="password" required><br><br>
-                                <input type="submit" value="Sign Up">
-                            </form>
-                        </div>
-                    </div>
+<div class="user-menu">
+<ul>
+<li><a href="index.html"><img src="home.svg"><br>Home</a></li>
+<li><a href="menu.html"><img src="Menu.png"><br>Menu</a></li>
+<li><a href="order.html"><img src="Order.png"><br>Order</a></li>
+<li><a href="contact.html"><img src="contact.png"><br>Contact</a></li>
+<button id="loginBtn" class="button">Login</button>
+<button id="signupBtn" class="button">Sign Up</button>
+</ul>
+</div>
+</nav>
+</header>
 
-                </ul>
-            </div>
+<section class="featured-products">
+<h1>Our Signature Cakes</h1>
+<p>Freshly baked every day using premium ingredients.</p>
 
-            <!-- Login Modal -->
-            <div id="loginModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Login</h2>
-                    <form>
-                        <label for="login-username">Username:</label>
-                        <input type="text" id="login-username" name="username" required><br><br>
-                        <label for="password">Password:</label>
-                        <input type="password" id="login-password" name="password" required><br><br>
-                        <input type="submit" value="Login">
-                    </form>
-                </div>
-            </div>
+<div class="products">
 
-            
-         
-            
+<div class="product-card">
+<span class="badge">Best Seller</span>
+<img src="chocolate.jpg">
+<div class="product-info">
+<h3>Chocolate Truffle</h3>
+<p>Rich chocolate sponge with ganache.</p>
+<div class="rating">★★★★★</div>
+<div class="price">₹699</div>
+<button class="add-cart">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<span class="badge">Popular</span>
+<img src="red_velvet2.jpg">
+<div class="product-info">
+<h3>Red Velvet</h3>
+<p>Cream cheese frosting with velvet sponge.</p>
+<div class="rating">★★★★★</div>
+<div class="price">₹899</div>
+<button class="add-cart">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<span class="badge">Premium</span>
+<img src="designer.jpg">
+<div class="product-info">
+<h3>Designer Cake</h3>
+<p>Perfect for birthdays & weddings.</p>
+<div class="rating">★★★★☆</div>
+<div class="price">₹1499</div>
+<button class="add-cart">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="classic_vanilla (1).jpg">
+<div class="product-info">
+<h3>Classic Vanilla</h3>
+<p>Soft vanilla sponge with whipped cream.</p>
+<div class="rating">★★★★★</div>
+<div class="price">₹549</div>
+<button class="add-cart">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="birthday.jpeg">
+<div class="product-info">
+<h3>Birthday Special</h3>
+<p>Custom decorations and flavours.</p>
+<div class="rating">★★★★★</div>
+<div class="price">₹999</div>
+<button class="add-cart">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="anniversary.jpeg">
+<div class="product-info">
+<h3>Anniversary Cake</h3>
+<p>Elegant cake crafted for celebrations.</p>
+<div class="rating">★★★★★</div>
+<div class="price">₹1099</div>
+<button class="add-cart">Add to Cart</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <img src="hermosabites.png" alt="Hermosa Bites">
+
+            <h2>Hermosa Bites</h2>
+
+            <p>
+                Crafting sweet memories with freshly baked cakes,
+                pastries and desserts made with love.
+            </p>
+
         </div>
-    </header>
 
+        <div class="footer-links">
 
-    <h1 class="menu_h1">Our Delicious Menu</h1>
-    <section class="menu-container">
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="chocolate.jpg" alt="Cake">
-                <h2>Chocolate Cake</h2>
-                <p>Rs 2000.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="red_velvet2.jpg" alt="Cake">
-                <h2>Red Velvet Cake</h2>
-                <p>Rs 2500.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="designer.jpg" alt="Cake">
-                <h2>Designer Cake</h2>
-                <p>Rs 3000.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="classic_vanilla (1).jpg" alt="Cake">
-                <h2>Classic Vanilla Cake</h2>
-                <p>Rs 500.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="classic_vanilla (1).jpg" alt="Cake">
-                <h2>Classic Vanilla Cake</h2>
-                <p>Rs 500.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="classic_vanilla (1).jpg" alt="Cake">
-                <h2>Classic Vanilla Cake</h2>
-                <p>Rs 500.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="classic_vanilla (1).jpg" alt="Cake">
-                <h2>Classic Vanilla Cake</h2>
-                <p>Rs 500.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="classic_vanilla (1).jpg" alt="Cake">
-                <h2>Classic Vanilla Cake</h2>
-                <p>Rs 500.00</p>
-            </div>
-            <div class="menu-item">
-                <img src="classic_vanilla (1).jpg" alt="Cake">
-                <h2>Classic Vanilla Cake</h2>
-                <p>Rs 500.00</p>
-            </div>
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="menu.html">Menu</a>
+
+            <a href="order.html">Order</a>
+
+            <a href="contact.html">Contact</a>
+
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2024 Hermosa Bites. All Rights Reserved.</p>
-    </footer>
-    <script src="index.js"></script>
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📍 Panjim, Goa</p>
+
+            <p>📞 +91 98765 43210</p>
+
+            <p>📧 hello@hermosabites.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">📷</a>
+
+                <a href="#">📘</a>
+
+                <a href="#">🐦</a>
+
+                <a href="#">💬</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Hermosa Bites. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>
