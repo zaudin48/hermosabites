@@ -1,12 +1,8 @@
-// ===============================
-// Hermosa Bites - Main JavaScript
-// ===============================
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ===============================
-    // LOGIN & SIGNUP MODALS
-    // ===============================
+    // ==============================
+    // LOGIN / SIGNUP MODALS
+    // ==============================
 
     const loginModal = document.getElementById("loginModal");
     const signupModal = document.getElementById("signupModal");
@@ -14,54 +10,74 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginBtn = document.getElementById("loginBtn");
     const signupBtn = document.getElementById("signupBtn");
 
-    const closeBtns = document.querySelectorAll(".close");
-
-    if (loginBtn) {
+    // Open Login
+    if (loginBtn && loginModal) {
         loginBtn.addEventListener("click", () => {
             loginModal.style.display = "block";
         });
     }
 
-    if (signupBtn) {
+    // Open Signup
+    if (signupBtn && signupModal) {
         signupBtn.addEventListener("click", () => {
             signupModal.style.display = "block";
         });
     }
 
-    closeBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            if (loginModal) loginModal.style.display = "none";
-            if (signupModal) signupModal.style.display = "none";
+    // Close buttons
+    document.querySelectorAll(".close").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (loginModal) {
+                loginModal.style.display = "none";
+            }
+
+            if (signupModal) {
+                signupModal.style.display = "none";
+            }
+
         });
+
     });
 
-    window.addEventListener("click", (e) => {
-        if (e.target === loginModal) {
+    // Close when clicking outside
+    window.addEventListener("click", event => {
+
+        if (event.target === loginModal) {
             loginModal.style.display = "none";
         }
 
-        if (e.target === signupModal) {
+        if (event.target === signupModal) {
             signupModal.style.display = "none";
         }
+
     });
 
-    // ===============================
+
+    // ==============================
     // LIVE SEARCH
-    // ===============================
+    // ==============================
 
-    const search = document.querySelector(".search-input");
+    const searchInput = document.querySelector(".search-input");
 
-    if (search) {
+    const searchableItems = document.querySelectorAll(
+        ".product-card, .menu-item, .category"
+    );
 
-        search.addEventListener("keyup", function () {
+    if (searchInput) {
 
-            let value = this.value.toLowerCase();
+        searchInput.addEventListener("input", () => {
 
-            const items = document.querySelectorAll(".menu-item, .product-card, .category");
+            const searchValue =
+                searchInput.value.trim().toLowerCase();
 
-            items.forEach(item => {
+            searchableItems.forEach(item => {
 
-                if (item.innerText.toLowerCase().includes(value)) {
+                const text =
+                    item.textContent.toLowerCase();
+
+                if (text.includes(searchValue)) {
 
                     item.style.display = "";
 
@@ -77,50 +93,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // ===============================
-    // ADD TO CART
-    // ===============================
 
-    const cartButtons = document.querySelectorAll(".add-cart");
+    // ==============================
+    // ADD TO CART
+    // ==============================
+
+    const cartButtons =
+        document.querySelectorAll(".add-cart");
 
     cartButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            const card = button.closest(".product-card");
+            const card =
+                button.closest(".product-card");
 
-            const cakeName = card.querySelector("h3").innerText;
+            if (!card) return;
 
-            const price = card.querySelector(".price").innerText;
+            const cakeName =
+                card.querySelector("h3")?.textContent.trim()
+                || "Cake";
 
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const price =
+                card.querySelector(".price")?.textContent.trim()
+                || "";
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart"))
+                || [];
 
             cart.push({
                 cake: cakeName,
-                price: price
+                price: price,
+                quantity: 1
             });
 
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
 
-            showToast(cakeName + " added to cart!");
+            showToast(
+                `🍰 ${cakeName} added to cart!`
+            );
 
         });
 
     });
 
-    // ===============================
-    // ORDER FORM
-    // ===============================
 
-    const orderForm = document.getElementById("cakeOrderForm");
+    // ==============================
+    // ORDER FORM
+    // ==============================
+
+    const orderForm =
+        document.getElementById("cakeOrderForm");
 
     if (orderForm) {
 
-        orderForm.addEventListener("submit", function (e) {
+        orderForm.addEventListener("submit", event => {
 
-            e.preventDefault();
+            event.preventDefault();
 
-            showToast("🎉 Your order has been placed!");
+            if (!orderForm.checkValidity()) {
+
+                orderForm.reportValidity();
+
+                return;
+
+            }
+
+            const orderData =
+                Object.fromEntries(
+                    new FormData(orderForm).entries()
+                );
+
+            localStorage.setItem(
+                "lastOrder",
+                JSON.stringify(orderData)
+            );
+
+            showToast(
+                "🎉 Order details saved successfully!"
+            );
 
             orderForm.reset();
 
@@ -128,107 +183,226 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // ===============================
+
+    // ==============================
+    // CONTACT FORM
+    // ==============================
+
+    const contactForm =
+        document.querySelector(".contact-section form");
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            if (!contactForm.checkValidity()) {
+
+                contactForm.reportValidity();
+
+                return;
+
+            }
+
+            showToast(
+                "📩 Message sent successfully!"
+            );
+
+            contactForm.reset();
+
+        });
+
+    }
+
+
+    // ==============================
+    // CAKE CUSTOMIZATION
+    // ==============================
+
+    const customizationForm =
+        document.getElementById(
+            "cake-customization-form"
+        );
+
+    if (customizationForm) {
+
+        customizationForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+                if (!customizationForm.checkValidity()) {
+
+                    customizationForm.reportValidity();
+
+                    return;
+
+                }
+
+                const customCake =
+                    Object.fromEntries(
+                        new FormData(
+                            customizationForm
+                        ).entries()
+                    );
+
+                localStorage.setItem(
+                    "customCake",
+                    JSON.stringify(customCake)
+                );
+
+                showToast(
+                    "🎂 Custom cake added!"
+                );
+
+            }
+        );
+
+    }
+
+
+    // ==============================
     // SCROLL TO TOP
-    // ===============================
+    // ==============================
 
-    const topBtn = document.createElement("button");
+    const topButton =
+        document.createElement("button");
 
-    topBtn.innerHTML = "↑";
+    topButton.id = "topBtn";
 
-    topBtn.id = "topBtn";
+    topButton.type = "button";
 
-    document.body.appendChild(topBtn);
+    topButton.innerHTML = "↑";
 
-    topBtn.style.cssText = `
-        position:fixed;
-        right:20px;
-        bottom:20px;
-        width:50px;
-        height:50px;
-        border:none;
-        border-radius:50%;
-        background:#ff6b6b;
-        color:white;
-        font-size:22px;
-        cursor:pointer;
-        display:none;
-        z-index:9999;
-        box-shadow:0 10px 20px rgba(0,0,0,.2);
-        transition:.3s;
-    `;
+    topButton.setAttribute(
+        "aria-label",
+        "Scroll to top"
+    );
+
+    Object.assign(
+        topButton.style,
+        {
+            position: "fixed",
+            right: "20px",
+            bottom: "20px",
+            width: "46px",
+            height: "46px",
+            border: "none",
+            borderRadius: "50%",
+            background: "#ff6b6b",
+            color: "#fff",
+            fontSize: "20px",
+            cursor: "pointer",
+            display: "none",
+            zIndex: "4000",
+            boxShadow:
+                "0 10px 25px rgba(0,0,0,.18)"
+        }
+    );
+
+    document.body.appendChild(topButton);
+
 
     window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 250) {
+        if (window.scrollY > 300) {
 
-            topBtn.style.display = "block";
+            topButton.style.display = "block";
 
         } else {
 
-            topBtn.style.display = "none";
+            topButton.style.display = "none";
 
         }
 
     });
 
-    topBtn.addEventListener("click", () => {
+
+    topButton.addEventListener("click", () => {
 
         window.scrollTo({
-
             top: 0,
-
             behavior: "smooth"
-
         });
 
     });
 
 });
 
-// ===============================
-// TOAST MESSAGE
-// ===============================
+
+// ==============================
+// TOAST NOTIFICATION
+// ==============================
 
 function showToast(message) {
 
-    const toast = document.createElement("div");
+    const oldToast =
+        document.querySelector(".toast-message");
 
-    toast.innerHTML = message;
+    if (oldToast) {
+        oldToast.remove();
+    }
 
-    toast.style.cssText = `
-        position:fixed;
-        top:20px;
-        right:20px;
-        background:#2d2d2d;
-        color:white;
-        padding:15px 20px;
-        border-radius:10px;
-        font-size:15px;
-        z-index:10000;
-        opacity:0;
-        transition:.4s;
-        box-shadow:0 10px 20px rgba(0,0,0,.2);
-    `;
+
+    const toast =
+        document.createElement("div");
+
+    toast.className =
+        "toast-message";
+
+    toast.textContent =
+        message;
+
+
+    Object.assign(
+        toast.style,
+        {
+            position: "fixed",
+            top: "20px",
+            right: "20px",
+            zIndex: "6000",
+            padding: "13px 18px",
+            borderRadius: "12px",
+            background: "#2d2d2d",
+            color: "#fff",
+            boxShadow:
+                "0 12px 30px rgba(0,0,0,.2)",
+            opacity: "0",
+            transform: "translateY(-8px)",
+            transition: ".25s"
+        }
+    );
+
 
     document.body.appendChild(toast);
 
-    setTimeout(() => {
+
+    requestAnimationFrame(() => {
 
         toast.style.opacity = "1";
 
-    }, 100);
+        toast.style.transform =
+            "translateY(0)";
+
+    });
+
 
     setTimeout(() => {
 
         toast.style.opacity = "0";
 
+        toast.style.transform =
+            "translateY(-8px)";
+
+
         setTimeout(() => {
 
             toast.remove();
 
-        }, 400);
+        }, 250);
 
-    }, 2500);
+    }, 2400);
 
 }
