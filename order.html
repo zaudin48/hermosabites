@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,593 +12,506 @@
 
 <body>
 
-<header>
+    <header>
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <div class="logo">
-            <img src="hermosabites.png" alt="Hermosa Bites">
-            <h2>Hermosa Bites</h2>
-        </div>
+            <div class="logo">
+                <img src="hermosabites.png" alt="Hermosa Bites">
+                <h2>Hermosa Bites</h2>
+            </div>
 
-        <div class="search-container">
+            <div class="search-container">
 
-            <input
-                class="search-input"
-                type="text"
-                placeholder="Search cakes..."
-            >
+                <input class="search-input" type="text" placeholder="Search cakes...">
 
-            <button class="search-button">
-                Search
-            </button>
-
-        </div>
-
-        <div class="user-menu">
-
-            <ul>
-
-                <li>
-                    <a href="index.html">
-                        <img src="home.svg" alt="Home">
-                        <br>
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="menu.html">
-                        <img src="Menu.png" alt="Menu">
-                        <br>
-                        Menu
-                    </a>
-                </li>
-
-                <li>
-                    <a href="order.html">
-                        <img src="Order.png" alt="Order">
-                        <br>
-                        Order
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        <img src="contact.png" alt="Contact">
-                        <br>
-                        Contact
-                    </a>
-                </li>
-
-                <button id="loginBtn" class="button">
-                    Login
+                <button class="search-button">
+                    Search
                 </button>
 
-                <button id="signupBtn" class="button">
-                    Sign Up
-                </button>
+            </div>
 
-            </ul>
+            <div class="user-menu">
 
-        </div>
+                <ul>
 
-    </nav>
+                    <li>
+                        <a href="index.html">
+                            <img src="home.svg" alt="Home">
+                            <br>
+                            Home
+                        </a>
+                    </li>
 
-</header>
+                    <li>
+                        <a href="menu.html">
+                            <img src="Menu.png" alt="Menu">
+                            <br>
+                            Menu
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="order.html">
+                            <img src="Order.png" alt="Order">
+                            <br>
+                            Order
+                        </a>
+                    </li>
 
-<section class="order-form">
+                    <li>
+                        <a href="contact.html">
+                            <img src="contact.png" alt="Contact">
+                            <br>
+                            Contact
+                        </a>
+                    </li>
 
-    <h1>Customize & Order Your Cake</h1>
+                    <button id="loginBtn" class="button">
+                        Login
+                    </button>
 
+                    <button id="signupBtn" class="button">
+                        Sign Up
+                    </button>
 
-    <form id="cakeOrderForm">
+                </ul>
 
+            </div>
 
-        <!-- FULL NAME -->
+        </nav>
 
-        <div class="form-field">
+    </header>
 
-            <label for="customerName">
-                Full Name
-            </label>
 
-            <input
-                type="text"
-                id="customerName"
-                name="customerName"
-                placeholder="Enter your name"
-                required
-            >
+    <section class="order-form">
 
-        </div>
+        <h1>Customize & Order Your Cake</h1>
 
 
-        <!-- PHONE -->
+        <form id="cakeOrderForm">
 
-        <div class="form-field">
 
-            <label for="phone">
-                Phone Number
-            </label>
+            <!-- FULL NAME -->
 
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="9876543210"
-                required
-            >
+            <div class="form-field">
 
-        </div>
+                <label for="customerName">
+                    Full Name
+                </label>
 
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your name" required>
 
-        <!-- EMAIL -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="email">
-                Email
-            </label>
+            <!-- PHONE -->
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="example@email.com"
-            >
+            <div class="form-field">
 
-        </div>
+                <label for="phone">
+                    Phone Number
+                </label>
 
+                <input type="tel" id="phone" name="phone" placeholder="9876543210" required>
 
-        <!-- CAKE -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="cake">
-                Select Cake
-            </label>
+            <!-- EMAIL -->
 
-            <select id="cake" name="cake">
+            <div class="form-field">
 
-                <option value="Chocolate Truffle">
-                    Chocolate Truffle
-                </option>
+                <label for="email">
+                    Email
+                </label>
 
-                <option value="Red Velvet">
-                    Red Velvet
-                </option>
+                <input type="email" id="email" name="email" placeholder="example@email.com">
 
-                <option value="Designer Cake">
-                    Designer Cake
-                </option>
+            </div>
 
-                <option value="Classic Vanilla">
-                    Classic Vanilla
-                </option>
 
-            </select>
+            <!-- CAKE -->
 
-        </div>
+            <div class="form-field">
 
+                <label for="cake">
+                    Select Cake
+                </label>
 
-        <!-- WEIGHT -->
+                <select id="cake" name="cake">
 
-        <div class="form-field">
+                    <option value="Chocolate Truffle">
+                        Chocolate Truffle
+                    </option>
 
-            <label for="weight">
-                Cake Weight
-            </label>
+                    <option value="Red Velvet">
+                        Red Velvet
+                    </option>
 
-            <select id="weight" name="weight">
+                    <option value="Designer Cake">
+                        Designer Cake
+                    </option>
 
-                <option value="500g">
-                    500 g
-                </option>
+                    <option value="Classic Vanilla">
+                        Classic Vanilla
+                    </option>
 
-                <option value="1kg">
-                    1 Kg
-                </option>
+                </select>
 
-                <option value="2kg">
-                    2 Kg
-                </option>
+            </div>
 
-                <option value="3kg">
-                    3 Kg
-                </option>
 
-            </select>
+            <!-- WEIGHT -->
 
-        </div>
+            <div class="form-field">
 
+                <label for="weight">
+                    Cake Weight
+                </label>
 
-        <!-- EGG -->
+                <select id="weight" name="weight">
 
-        <div class="form-field">
+                    <option value="500g">
+                        500 g
+                    </option>
 
-            <label for="eggPreference">
-                Egg Preference
-            </label>
+                    <option value="1kg">
+                        1 Kg
+                    </option>
 
-            <select
-                id="eggPreference"
-                name="eggPreference"
-            >
+                    <option value="2kg">
+                        2 Kg
+                    </option>
 
-                <option value="Egg">
-                    Egg
-                </option>
+                    <option value="3kg">
+                        3 Kg
+                    </option>
 
-                <option value="Eggless">
-                    Eggless
-                </option>
+                </select>
 
-            </select>
+            </div>
 
-        </div>
 
+            <!-- EGG -->
 
-        <!-- DATE -->
+            <div class="form-field">
 
-        <div class="form-field">
+                <label for="eggPreference">
+                    Egg Preference
+                </label>
 
-            <label for="deliveryDate">
-                Delivery Date
-            </label>
+                <select id="eggPreference" name="eggPreference">
 
-            <input
-                type="date"
-                id="deliveryDate"
-                name="deliveryDate"
-                required
-            >
+                    <option value="Egg">
+                        Egg
+                    </option>
 
-        </div>
+                    <option value="Eggless">
+                        Eggless
+                    </option>
 
+                </select>
 
-        <!-- TIME -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="deliveryTime">
-                Delivery Time
-            </label>
+            <!-- DATE -->
 
-            <input
-                type="time"
-                id="deliveryTime"
-                name="deliveryTime"
-            >
+            <div class="form-field">
 
-        </div>
+                <label for="deliveryDate">
+                    Delivery Date
+                </label>
 
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
 
-        <!-- ADDRESS -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="address">
-                Delivery Address
-            </label>
+            <!-- TIME -->
 
-            <textarea
-                id="address"
-                name="address"
-                rows="4"
-                placeholder="Enter complete address"
-            ></textarea>
+            <div class="form-field">
 
-        </div>
+                <label for="deliveryTime">
+                    Delivery Time
+                </label>
 
+                <input type="time" id="deliveryTime" name="deliveryTime">
 
-        <!-- CAKE MESSAGE -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="cakeMessage">
-                Custom Message on Cake
-            </label>
+            <!-- ADDRESS -->
 
-            <input
-                type="text"
-                id="cakeMessage"
-                name="cakeMessage"
-                placeholder="Happy Birthday John"
-            >
+            <div class="form-field">
 
-        </div>
+                <label for="address">
+                    Delivery Address
+                </label>
 
+                <textarea id="address" name="address" rows="4" placeholder="Enter complete address"></textarea>
 
-        <!-- SPECIAL INSTRUCTIONS -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="instructions">
-                Special Instructions
-            </label>
+            <!-- CAKE MESSAGE -->
 
-            <textarea
-                id="instructions"
-                name="instructions"
-                rows="4"
-                placeholder="Extra candles, less cream, etc."
-            ></textarea>
+            <div class="form-field">
 
-        </div>
+                <label for="cakeMessage">
+                    Custom Message on Cake
+                </label>
 
+                <input type="text" id="cakeMessage" name="cakeMessage" placeholder="Happy Birthday John">
 
-        <!-- COUPON -->
+            </div>
 
-        <div class="form-field">
 
-            <label for="coupon">
-                Coupon Code
-            </label>
+            <!-- SPECIAL INSTRUCTIONS -->
 
-            <input
-                type="text"
-                id="coupon"
-                name="coupon"
-                placeholder="HB20"
-            >
+            <div class="form-field">
 
-        </div>
+                <label for="instructions">
+                    Special Instructions
+                </label>
 
+                <textarea id="instructions" name="instructions" rows="4"
+                    placeholder="Extra candles, less cream, etc."></textarea>
 
-        <!-- BUTTONS -->
+            </div>
 
-        <div class="order-buttons">
 
-            <a
-                href="customize.html"
-                class="button"
-                style="
+            <!-- COUPON -->
+
+            <div class="form-field">
+
+                <label for="coupon">
+                    Coupon Code
+                </label>
+
+                <input type="text" id="coupon" name="coupon" placeholder="HB20">
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="order-buttons">
+
+                <a href="customize.html" class="button" style="
                     display:flex;
                     justify-content:center;
                     align-items:center;
                     background:#ffb347;
                     color:white;
-                "
-            >
-                🎂 Customize Cake
-            </a>
-
-
-            <input
-                type="submit"
-                value="Place Order"
-            >
-
-        </div>
-
-
-    </form>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <div class="footer-container">
-
-
-        <div class="footer-about">
-
-            <img
-                src="hermosabites.png"
-                alt="Hermosa Bites"
-            >
-
-            <h2>
-                Hermosa Bites
-            </h2>
-
-            <p>
-                Crafting sweet memories with freshly baked
-                cakes, pastries and desserts made with love.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>
-                Quick Links
-            </h3>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="menu.html">
-                Menu
-            </a>
-
-            <a href="order.html">
-                Order
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <h3>
-                Contact
-            </h3>
-
-            <p>
-                📍 Panjim, Goa
-            </p>
-
-            <p>
-                📞 +91 98765 43210
-            </p>
-
-            <p>
-                📧 hello@hermosabites.com
-            </p>
-
-        </div>
-
-
-        <div class="footer-social">
-
-            <h3>
-                Follow Us
-            </h3>
-
-            <div class="social-icons">
-
-                <a href="#">
-                    📷
+                ">
+                    🎂 Customize Cake
                 </a>
 
-                <a href="#">
-                    📘
+
+                <input type="submit" value="Place Order">
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <img src="hermosabites.png" alt="Hermosa Bites">
+
+                <h2>
+                    Hermosa Bites
+                </h2>
+
+                <p>
+                    Crafting sweet memories with freshly baked
+                    cakes, pastries and desserts made with love.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
                 </a>
 
-                <a href="#">
-                    🐦
+                <a href="menu.html">
+                    Menu
                 </a>
 
-                <a href="#">
-                    💬
+                <a href="order.html">
+                    Order
                 </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📍 Panjim, Goa
+                </p>
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+                <p>
+                    📧 hello@hermosabites.com
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        📷
+                    </a>
+
+                    <a href="#">
+                        📘
+                    </a>
+
+                    <a href="#">
+                        🐦
+                    </a>
+
+                    <a href="#">
+                        💬
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+
+        <hr>
 
 
-    <hr>
+        <p class="copyright">
+            © 2026 Hermosa Bites. All Rights Reserved.
+        </p>
+
+    </footer>
 
 
-    <p class="copyright">
-        © 2026 Hermosa Bites. All Rights Reserved.
-    </p>
+    <!-- LOGIN MODAL -->
 
-</footer>
+    <div id="loginModal" class="modal">
 
+        <div class="modal-content">
 
-<!-- LOGIN MODAL -->
+            <span class="close">
+                &times;
+            </span>
 
-<div id="loginModal" class="modal">
+            <h2>
+                Login
+            </h2>
 
-    <div class="modal-content">
+            <form>
 
-        <span class="close">
-            &times;
-        </span>
+                <label for="loginUsername">
+                    Username
+                </label>
 
-        <h2>
-            Login
-        </h2>
+                <input type="text" id="loginUsername" placeholder="Username">
 
-        <form>
+                <label for="loginPassword">
+                    Password
+                </label>
 
-            <label for="loginUsername">
-                Username
-            </label>
+                <input type="password" id="loginPassword" placeholder="Password">
 
-            <input
-                type="text"
-                id="loginUsername"
-                placeholder="Username"
-            >
+                <input type="submit" value="Login">
 
-            <label for="loginPassword">
-                Password
-            </label>
+            </form>
 
-            <input
-                type="password"
-                id="loginPassword"
-                placeholder="Password"
-            >
-
-            <input
-                type="submit"
-                value="Login"
-            >
-
-        </form>
+        </div>
 
     </div>
 
-</div>
 
+    <!-- SIGNUP MODAL -->
 
-<!-- SIGNUP MODAL -->
+    <div id="signupModal" class="modal">
 
-<div id="signupModal" class="modal">
+        <div class="modal-content">
 
-    <div class="modal-content">
+            <span class="close">
+                &times;
+            </span>
 
-        <span class="close">
-            &times;
-        </span>
+            <h2>
+                Create Account
+            </h2>
 
-        <h2>
-            Create Account
-        </h2>
+            <form>
 
-        <form>
+                <label for="signupUsername">
+                    Username
+                </label>
 
-            <label for="signupUsername">
-                Username
-            </label>
+                <input type="text" id="signupUsername" placeholder="Username">
 
-            <input
-                type="text"
-                id="signupUsername"
-                placeholder="Username"
-            >
+                <label for="signupEmail">
+                    Email
+                </label>
 
-            <label for="signupEmail">
-                Email
-            </label>
+                <input type="email" id="signupEmail" placeholder="Email">
 
-            <input
-                type="email"
-                id="signupEmail"
-                placeholder="Email"
-            >
+                <label for="signupPassword">
+                    Password
+                </label>
 
-            <label for="signupPassword">
-                Password
-            </label>
+                <input type="password" id="signupPassword" placeholder="Password">
 
-            <input
-                type="password"
-                id="signupPassword"
-                placeholder="Password"
-            >
+                <input type="submit" value="Create Account">
 
-            <input
-                type="submit"
-                value="Create Account"
-            >
+            </form>
 
-        </form>
+        </div>
 
     </div>
 
-</div>
 
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 
 </body>
+
 </html>
