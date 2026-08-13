@@ -88,235 +88,129 @@
 
         <h1>Customize & Order Your Cake</h1>
 
+<form id="cakeOrderForm">
+
+    <div class="form-field">
+        <label for="customerName">Full Name</label>
+        <input
+            type="text"
+            id="customerName"
+            name="customerName"
+            placeholder="Enter your name"
+            required
+        >
+    </div>
+
+    <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="9876543210"
+            required
+        >
+    </div>
+
+    <div class="form-field">
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+        >
+    </div>
+
+    <div class="form-field">
+        <label for="cake">Select Cake</label>
+        <select id="cake" name="cake">
+            <option>Chocolate Truffle</option>
+            <option>Red Velvet</option>
+            <option>Designer Cake</option>
+            <option>Classic Vanilla</option>
+        </select>
+    </div>
+
+    <div class="form-field">
+        <label for="weight">Cake Weight</label>
+        <select id="weight" name="weight">
+            <option>500 g</option>
+            <option>1 Kg</option>
+            <option>2 Kg</option>
+            <option>3 Kg</option>
+        </select>
+    </div>
+
+    <div class="form-field">
+        <label for="eggPreference">Egg Preference</label>
+        <select id="eggPreference" name="eggPreference">
+            <option>Egg</option>
+            <option>Eggless</option>
+        </select>
+    </div>
+
+    <div class="form-field">
+        <label for="deliveryDate">Delivery Date</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+    </div>
+
+    <div class="form-field">
+        <label for="deliveryTime">Delivery Time</label>
+        <input type="time" id="deliveryTime" name="deliveryTime">
+    </div>
+
+    <div class="form-field">
+        <label for="address">Delivery Address</label>
+        <textarea
+            id="address"
+            name="address"
+            rows="4"
+            placeholder="Enter complete address"
+        ></textarea>
+    </div>
+
+    <div class="form-field">
+        <label for="cakeMessage">Custom Message on Cake</label>
+        <input
+            type="text"
+            id="cakeMessage"
+            name="cakeMessage"
+            placeholder="Happy Birthday John"
+        >
+    </div>
+
+    <div class="form-field">
+        <label for="instructions">Special Instructions</label>
+        <textarea
+            id="instructions"
+            name="instructions"
+            rows="4"
+            placeholder="Extra candles, less cream, etc."
+        ></textarea>
+    </div>
 
-        <form id="cakeOrderForm">
+    <div class="form-field">
+        <label for="coupon">Coupon Code</label>
+        <input
+            type="text"
+            id="coupon"
+            name="coupon"
+            placeholder="HB20"
+        >
+    </div>
 
+    <div class="order-buttons">
 
-            <!-- FULL NAME -->
+        <a href="customize.html" class="customize-btn">
+            🎂 Customize Cake
+        </a>
 
-            <div class="form-field">
+        <input type="submit" value="Place Order">
 
-                <label for="customerName">
-                    Full Name
-                </label>
+    </div>
 
-                <input type="text" id="customerName" name="customerName" placeholder="Enter your name" required>
-
-            </div>
-
-
-            <!-- PHONE -->
-
-            <div class="form-field">
-
-                <label for="phone">
-                    Phone Number
-                </label>
-
-                <input type="tel" id="phone" name="phone" placeholder="9876543210" required>
-
-            </div>
-
-
-            <!-- EMAIL -->
-
-            <div class="form-field">
-
-                <label for="email">
-                    Email
-                </label>
-
-                <input type="email" id="email" name="email" placeholder="example@email.com">
-
-            </div>
-
-
-            <!-- CAKE -->
-
-            <div class="form-field">
-
-                <label for="cake">
-                    Select Cake
-                </label>
-
-                <select id="cake" name="cake">
-
-                    <option value="Chocolate Truffle">
-                        Chocolate Truffle
-                    </option>
-
-                    <option value="Red Velvet">
-                        Red Velvet
-                    </option>
-
-                    <option value="Designer Cake">
-                        Designer Cake
-                    </option>
-
-                    <option value="Classic Vanilla">
-                        Classic Vanilla
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- WEIGHT -->
-
-            <div class="form-field">
-
-                <label for="weight">
-                    Cake Weight
-                </label>
-
-                <select id="weight" name="weight">
-
-                    <option value="500g">
-                        500 g
-                    </option>
-
-                    <option value="1kg">
-                        1 Kg
-                    </option>
-
-                    <option value="2kg">
-                        2 Kg
-                    </option>
-
-                    <option value="3kg">
-                        3 Kg
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- EGG -->
-
-            <div class="form-field">
-
-                <label for="eggPreference">
-                    Egg Preference
-                </label>
-
-                <select id="eggPreference" name="eggPreference">
-
-                    <option value="Egg">
-                        Egg
-                    </option>
-
-                    <option value="Eggless">
-                        Eggless
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- DATE -->
-
-            <div class="form-field">
-
-                <label for="deliveryDate">
-                    Delivery Date
-                </label>
-
-                <input type="date" id="deliveryDate" name="deliveryDate" required>
-
-            </div>
-
-
-            <!-- TIME -->
-
-            <div class="form-field">
-
-                <label for="deliveryTime">
-                    Delivery Time
-                </label>
-
-                <input type="time" id="deliveryTime" name="deliveryTime">
-
-            </div>
-
-
-            <!-- ADDRESS -->
-
-            <div class="form-field">
-
-                <label for="address">
-                    Delivery Address
-                </label>
-
-                <textarea id="address" name="address" rows="4" placeholder="Enter complete address"></textarea>
-
-            </div>
-
-
-            <!-- CAKE MESSAGE -->
-
-            <div class="form-field">
-
-                <label for="cakeMessage">
-                    Custom Message on Cake
-                </label>
-
-                <input type="text" id="cakeMessage" name="cakeMessage" placeholder="Happy Birthday John">
-
-            </div>
-
-
-            <!-- SPECIAL INSTRUCTIONS -->
-
-            <div class="form-field">
-
-                <label for="instructions">
-                    Special Instructions
-                </label>
-
-                <textarea id="instructions" name="instructions" rows="4"
-                    placeholder="Extra candles, less cream, etc."></textarea>
-
-            </div>
-
-
-            <!-- COUPON -->
-
-            <div class="form-field">
-
-                <label for="coupon">
-                    Coupon Code
-                </label>
-
-                <input type="text" id="coupon" name="coupon" placeholder="HB20">
-
-            </div>
-
-
-            <!-- BUTTONS -->
-
-            <div class="order-buttons">
-
-                <a href="customize.html" class="button" style="
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    background:#ffb347;
-                    color:white;
-                ">
-                    🎂 Customize Cake
-                </a>
-
-
-                <input type="submit" value="Place Order">
-
-            </div>
-
-
-        </form>
-
+</form>
     </section>
 
 

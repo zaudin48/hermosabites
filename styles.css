@@ -1035,3 +1035,55 @@ section p {
     }
 
 }
+/* ORDER FORM FIX */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+}
+
+.order-buttons {
+    grid-column: span 2;
+    display: flex;
+    gap: 15px;
+}
+
+.customize-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffb347;
+    color: white;
+    font-weight: 600;
+}
+
+.order-buttons input[type="submit"] {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+
+    #cakeOrderForm {
+        grid-template-columns: 1fr;
+    }
+
+    .order-buttons {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+
+}
