@@ -1,172 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hermosa Bites | Menu</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Menu | Hermosa Bites</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+<!-- =========================
+     NAVBAR
+========================= -->
+
 <header>
-<nav class="navbar">
-<div class="logo">
-<img src="hermosabites.png" alt="Hermosa Bites">
-<h2>Hermosa Bites</h2>
-</div>
 
-<div class="search-container">
-<input class="search-input" type="text" placeholder="Search your favourite cake...">
-<button class="search-button">Search</button>
-</div>
+    <nav class="navbar">
 
-<div class="user-menu">
-<ul>
-<li><a href="index.html"><img src="home.svg"><br>Home</a></li>
-<li><a href="menu.html"><img src="Menu.png"><br>Menu</a></li>
-<li><a href="order.html"><img src="Order.png"><br>Order</a></li>
-<li><a href="contact.html"><img src="contact.png"><br>Contact</a></li>
-<button id="loginBtn" class="button">Login</button>
-<button id="signupBtn" class="button">Sign Up</button>
-</ul>
-</div>
-</nav>
+        <div class="logo">
+            <img src="hermosabites.png" alt="Hermosa Bites">
+            <h2>Hermosa Bites</h2>
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                class="search-input"
+                placeholder="Search cakes..."
+                aria-label="Search cakes"
+            >
+
+            <button class="search-button" type="button">
+                Search
+            </button>
+
+        </div>
+
+        <div class="user-menu">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        <img src="home.svg" alt="Home">
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="menu.html">
+                        <img src="Menu.png" alt="Menu">
+                        <span>Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="order.html">
+                        <img src="Order.png" alt="Order">
+                        <span>Order</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        <img src="contact.png" alt="Contact">
+                        <span>Contact</span>
+                    </a>
+                </li>
+
+                <li>
+                    <button id="loginBtn" class="button">
+                        Login
+                    </button>
+                </li>
+
+                <li>
+                    <button id="signupBtn" class="button">
+                        Sign Up
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
 </header>
 
-<section class="featured-products">
-<h1>Our Signature Cakes</h1>
-<p>Freshly baked every day using premium ingredients.</p>
 
-<div class="products">
+<!-- =========================
+     MENU
+========================= -->
 
-<div class="product-card">
-<span class="badge">Best Seller</span>
-<img src="chocolate.jpg">
-<div class="product-info">
-<h3>Chocolate Truffle</h3>
-<p>Rich chocolate sponge with ganache.</p>
-<div class="rating">★★★★★</div>
-<div class="price">₹699</div>
-<button class="add-cart">Add to Cart</button>
-</div>
-</div>
+<main>
 
-<div class="product-card">
-<span class="badge">Popular</span>
-<img src="red_velvet2.jpg">
-<div class="product-info">
-<h3>Red Velvet</h3>
-<p>Cream cheese frosting with velvet sponge.</p>
-<div class="rating">★★★★★</div>
-<div class="price">₹899</div>
-<button class="add-cart">Add to Cart</button>
-</div>
-</div>
+    <section class="menu-section">
 
-<div class="product-card">
-<span class="badge">Premium</span>
-<img src="designer.jpg">
-<div class="product-info">
-<h3>Designer Cake</h3>
-<p>Perfect for birthdays & weddings.</p>
-<div class="rating">★★★★☆</div>
-<div class="price">₹1499</div>
-<button class="add-cart">Add to Cart</button>
-</div>
-</div>
+        <h1>Our Delicious Menu 🍰</h1>
 
-<div class="product-card">
-<img src="classic_vanilla (1).jpg">
-<div class="product-info">
-<h3>Classic Vanilla</h3>
-<p>Soft vanilla sponge with whipped cream.</p>
-<div class="rating">★★★★★</div>
-<div class="price">₹549</div>
-<button class="add-cart">Add to Cart</button>
-</div>
-</div>
+        <p>
+            Explore our freshly baked cakes made for every
+            celebration and sweet craving.
+        </p>
 
-<div class="product-card">
-<img src="birthday.jpeg">
-<div class="product-info">
-<h3>Birthday Special</h3>
-<p>Custom decorations and flavours.</p>
-<div class="rating">★★★★★</div>
-<div class="price">₹999</div>
-<button class="add-cart">Add to Cart</button>
-</div>
-</div>
 
-<div class="product-card">
-<img src="anniversary.jpeg">
-<div class="product-info">
-<h3>Anniversary Cake</h3>
-<p>Elegant cake crafted for celebrations.</p>
-<div class="rating">★★★★★</div>
-<div class="price">₹1099</div>
-<button class="add-cart">Add to Cart</button>
-</div>
-</div>
+        <div class="products">
 
-</div>
-</section>
+
+            <!-- CHOCOLATE -->
+
+            <div class="product-card">
+
+                <span class="badge">
+                    Best Seller
+                </span>
+
+                <img
+                    src="chocolate.jpg"
+                    alt="Chocolate Truffle Cake"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Chocolate Truffle
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="price">
+                        ₹699
+                    </div>
+
+                    <p>
+                        Rich chocolate cake layered
+                        with smooth chocolate truffle.
+                    </p>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RED VELVET -->
+
+            <div class="product-card">
+
+                <span class="badge">
+                    Popular
+                </span>
+
+                <img
+                    src="red_velvet2.jpg"
+                    alt="Red Velvet Cake"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Red Velvet
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="price">
+                        ₹899
+                    </div>
+
+                    <p>
+                        Soft red velvet sponge with
+                        creamy cheese frosting.
+                    </p>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESIGNER -->
+
+            <div class="product-card">
+
+                <span class="badge">
+                    Premium
+                </span>
+
+                <img
+                    src="designer.jpg"
+                    alt="Designer Cake"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Designer Cake
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+
+                    <div class="price">
+                        ₹1499
+                    </div>
+
+                    <p>
+                        Beautifully decorated custom cake
+                        for your special occasions.
+                    </p>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- VANILLA -->
+
+            <div class="product-card">
+
+                <span class="badge">
+                    Classic
+                </span>
+
+                <img
+                    src="classic_vanilla (1).jpg"
+                    alt="Classic Vanilla Cake"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Classic Vanilla
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="price">
+                        ₹500
+                    </div>
+
+                    <p>
+                        Light and fluffy vanilla cake
+                        with delicious creamy frosting.
+                    </p>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BIRTHDAY -->
+
+            <div class="product-card">
+
+                <span class="badge">
+                    Celebration
+                </span>
+
+                <img
+                    src="birthday.jpeg"
+                    alt="Birthday Cake"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Birthday Special
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="price">
+                        ₹799
+                    </div>
+
+                    <p>
+                        A colourful celebration cake
+                        made for unforgettable birthdays.
+                    </p>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ANNIVERSARY -->
+
+            <div class="product-card">
+
+                <span class="badge">
+                    Special
+                </span>
+
+                <img
+                    src="anniversary.jpeg"
+                    alt="Anniversary Cake"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Anniversary Special
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="price">
+                        ₹999
+                    </div>
+
+                    <p>
+                        Elegant cake designed for
+                        beautiful anniversaries.
+                    </p>
+
+                    <button class="add-cart">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
     <div class="footer-container">
 
+
         <div class="footer-about">
 
-            <img src="hermosabites.png" alt="Hermosa Bites">
+            <img
+                src="hermosabites.png"
+                alt="Hermosa Bites"
+            >
 
-            <h2>Hermosa Bites</h2>
+            <h2>
+                Hermosa Bites
+            </h2>
 
             <p>
-                Crafting sweet memories with freshly baked cakes,
-                pastries and desserts made with love.
+                Freshly baked cakes made with premium
+                ingredients for every special occasion.
             </p>
 
         </div>
 
+
         <div class="footer-links">
 
-            <h3>Quick Links</h3>
+            <h3>
+                Quick Links
+            </h3>
 
-            <a href="index.html">Home</a>
+            <a href="index.html">
+                Home
+            </a>
 
-            <a href="menu.html">Menu</a>
+            <a href="menu.html">
+                Menu
+            </a>
 
-            <a href="order.html">Order</a>
+            <a href="order.html">
+                Order
+            </a>
 
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">
+                Contact
+            </a>
 
         </div>
+
 
         <div class="footer-contact">
 
-            <h3>Contact</h3>
+            <h3>
+                Contact
+            </h3>
 
-            <p>📍 Panjim, Goa</p>
+            <p>
+                📍 Panjim, Goa
+            </p>
 
-            <p>📞 +91 98765 43210</p>
+            <p>
+                📞 +91 98765 43210
+            </p>
 
-            <p>📧 hello@hermosabites.com</p>
+            <p>
+                📧 hello@hermosabites.com
+            </p>
 
         </div>
 
+
         <div class="footer-social">
 
-            <h3>Follow Us</h3>
+            <h3>
+                Follow Us
+            </h3>
 
             <div class="social-icons">
 
-                <a href="#">📷</a>
+                <a href="#" aria-label="Instagram">
+                    📷
+                </a>
 
-                <a href="#">📘</a>
+                <a href="#" aria-label="Facebook">
+                    📘
+                </a>
 
-                <a href="#">🐦</a>
+                <a href="#" aria-label="Twitter">
+                    🐦
+                </a>
 
-                <a href="#">💬</a>
+                <a href="#" aria-label="WhatsApp">
+                    💬
+                </a>
 
             </div>
 
@@ -174,7 +468,9 @@
 
     </div>
 
+
     <hr>
+
 
     <p class="copyright">
         © 2026 Hermosa Bites. All Rights Reserved.
@@ -182,6 +478,124 @@
 
 </footer>
 
+
+<!-- =========================
+     LOGIN MODAL
+========================= -->
+
+<div id="loginModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">
+            &times;
+        </span>
+
+        <h2>
+            Welcome Back
+        </h2>
+
+        <form>
+
+            <label for="loginUsername">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="loginUsername"
+                placeholder="Enter username"
+                required
+            >
+
+            <label for="loginPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter password"
+                required
+            >
+
+            <input
+                type="submit"
+                value="Login"
+            >
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     SIGN UP MODAL
+========================= -->
+
+<div id="signupModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">
+            &times;
+        </span>
+
+        <h2>
+            Create Account
+        </h2>
+
+        <form>
+
+            <label for="signupUsername">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="signupUsername"
+                placeholder="Choose a username"
+                required
+            >
+
+            <label for="signupEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="signupPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                required
+            >
+
+            <input
+                type="submit"
+                value="Create Account"
+            >
+
+        </form>
+
+    </div>
+
+</div>
+
+
 <script src="index.js"></script>
+
 </body>
+
 </html>
